@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build & npm run copy_assets",
     "preview": "vite preview",
-    "copy_assets": "copyfiles -u 2 \"./src/assets/data/*.xlsx\" ./dist/assets/"
+    "copy_assets": "copyfiles -u 2 \"./src/assets/data/*.xlsx\" ./dist/assets/",
+    "deploy": "npm install & npm run build"
   },
   "dependencies": {
     "react": "^17.0.2",
