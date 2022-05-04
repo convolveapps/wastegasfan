@@ -1,0 +1,122 @@
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,200;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './assets/fonts/fontawesome/fontawesome.min.css';
+
+:root{
+  --clr-body-bg: hsl(240, 38%, 97%); // #f4f4fa
+  --clr-white: hsl(0, 0%, 100%); // #ffffff
+
+  --clr-black-100: hsl(240, 0%, 94%); // #f0f0f0
+  --clr-black-250: hsl(240, 0%, 75%); // #bfbfbf
+  --clr-black-300: hsl(240, 0%, 63%); // #a1a1a1
+
+  --clr-primary-10: hsl(251, 23%, 96%); // #f3f2f7
+  --clr-primary-100: hsl(251, 23%, 76%); // #b9b4d0
+  --clr-primary-250: hsl(251, 37%, 63%); // #8b7ec4
+  --clr-primary-400: hsl(251, 53%, 46%); // #4e37b3
+
+  //--clr-warning-400: hsl(13, 100%, 66%); // #ff7752
+  --clr-warning-400: hsl(47, 85%, 48%); // #e2b512
+
+  --clr-danger-400: hsl(0, 90%, 60%); // #f53d3d
+
+  --clr-success-400: #40c234;
+
+  --fs-075: 0.75rem;
+  --fs-09: 0.9rem;
+  --fs-10: 1rem;
+  --fs-12: 1.2rem;
+  --fs-20: 2rem;
+  --fs-50: 5rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  background-color: var(--clr-body-bg);
+  font-size: var(--fs-09);
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bg-shadow{
+  box-shadow: 0rem 0rem 0.75rem 0rem var(--clr-black-250);
+}
+
+.bg-primary{
+  background-color: var(--clr-primary-400);
+}
+
+.bg-warning{
+  background-color: var(--clr-warning-400);
+}
+
+.text-primary{
+  color: var(--clr-primary-400);
+}
+
+.text-warning{
+  color: var(--clr-warning-400);
+}
+
+.text-success{
+  color: var(--clr-success-400);
+}
+
+.text-danger{
+  color: var(--clr-danger-400);
+}
+
+.tbl{
+  display: table;
+  td, th{
+    padding: 0.5rem 1rem;
+  }
+  th{
+    background-color: var(--clr-primary-400);
+    color: var(--clr-white);
+  }
+}
+
+.tbl-bordered{
+  border: 1px solid var(--clr-primary-100);
+  text-align: center;
+  border-collapse: collapse;
+  td, th{
+    border: 1px solid var(--clr-primary-100);
+  }
+}
+
+.tbl-alternate{
+  tr:nth-child(2n+1){
+    background-color: var(--clr-primary-10);
+  }
+}
+
+.tbl-hover{
+  tr:hover{
+    background-color: var(--clr-primary-10);
+  }
+}
+
+.tbl-responsive{
+  table{
+    width: 100%;
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}

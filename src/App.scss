@@ -1,0 +1,20 @@
+.layout{
+    display: flex;
+}
+
+.page-details{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-content{
+    padding: 0rem 0.5rem;
+}
+
+@keyframes jingle {
+
+    50%{
+        transform: rotate(35deg);
+    }
+}

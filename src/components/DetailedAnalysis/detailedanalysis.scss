@@ -1,0 +1,72 @@
+.issue-type-selection{
+    height: 3rem;
+    margin: 0rem 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    i{
+        font-size: var(--fs-20);
+        color: var(--clr-primary-400);
+        cursor: pointer;
+    }
+
+    .select-issue{
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .critical-issue, .warning-issue{
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            color: var(--clr-white);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .critical-issue{
+            background-color: var(--clr-danger-400);
+        }
+        .warning-issue{
+            background-color: var(--clr-warning-400);
+        }
+    }
+}
+
+.impact, .anomaly{
+    height: 20rem;
+    padding: 0.5rem;
+    display: grid;
+    
+    gap: 1rem;
+
+    & > * {
+        background-color: var(--clr-white);
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    .impacted-fans{
+        max-height: 19rem;
+    }
+}
+
+.impact{
+    grid-template-columns: 1fr 1fr;
+}
+
+.anomaly{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.table-detail{
+    display: flex;
+    margin: 0.5rem 1rem;
+    justify-content: start;
+    overflow-y: auto;
+    max-height: 80%;
+}

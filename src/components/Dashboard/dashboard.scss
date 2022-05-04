@@ -1,0 +1,188 @@
+// .health-info{
+//     height: 20rem;
+//     padding: 0.5rem;
+//     display: grid !important;
+//     grid-template-columns: 1fr 2fr;
+//     gap: 1rem;
+
+//     & > * {
+//         background-color: var(--clr-white);
+//         width: 100%;
+//         height: 100%;
+//         border-radius: 1rem;
+//     }
+// }
+
+// .app-info{
+//     height: 20rem;
+//     padding: 0.5rem;
+//     display: grid !important;
+//     grid-template-columns: 2fr 1fr 2fr;
+//     gap: 1rem;
+
+//     & > * {
+//         background-color: var(--clr-white);
+//         width: 100%;
+//         height: 100%;
+//         border-radius: 1rem;
+//     }
+
+//     .efficiency-metric{
+//         background: unset;
+//         border-radius: unset;
+//         display: grid;
+//         grid-template-rows: 1fr 1fr;
+//         gap: 1rem;
+
+//         & > *{
+//             background-color: var(--clr-white);
+//             width: 100%;
+//             height: 100%;
+//             border-radius: 1rem;
+//         }
+
+//         .storage-usage, .memory-usage{
+//             display: grid;
+//             grid-template-columns: 1fr 1fr;
+//             align-items: center;
+//             justify-items: center;
+//             position: relative;
+
+//             & > * {
+//                 height: 7rem;
+//             }
+
+//             h4{
+//                 position: absolute;
+//                 top: 50%;
+//                 left: 50%;
+//                 transform: translateY(-20%);
+//                 word-break: break-all;
+//             }
+//         }
+
+//         .storage-usage{
+//             background-color: var(--clr-warning-400);
+
+//             h4{
+//                 color: var(--clr-white);
+//             }
+//         }
+//     }
+// }
+
+// h4{
+//     margin: 0.75rem .75rem;
+// }
+
+// .health-gauge{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     align-items: center;
+// }
+
+// .health-score{
+//     width: 80%;
+//     height: 80%;
+// }
+
+// .health-summary-chart{
+//     width: 100%;
+//     height: 80%;
+// }
+
+// .data-analyzed-chart{
+//     width: 100%;
+//     height: 80%;
+// }
+
+// .storage-usage-chart{
+//     width: 100%;
+//     height: 80%;
+// }
+
+// .memory-usage-chart{
+//     width: 100%;
+//     height: 80%;
+// }
+
+// .system-efficiency-chart{
+//     width: 100%;
+//     height: 80%;
+// }
+
+// .anomaly-detection{
+//     height: 20rem;
+//     padding: 0.5rem;
+//     display: grid !important;
+//     grid-template-columns: 1fr 2fr;
+//     gap: 1rem;
+
+//     & > * {
+//         background-color: var(--clr-white);
+//         width: 100%;
+//         height: 100%;
+//         border-radius: 1rem;
+//     }
+// }
+
+
+.fans, .fan-info{
+    height: 20rem;
+    padding: 0.5rem;
+    display: grid;
+    
+    gap: 1rem;
+
+    & > * {
+        background-color: var(--clr-white);
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+    }
+}
+
+.fans{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.fan-info{
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.fans > *{
+    cursor: pointer;
+}
+
+.card-heading{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0.125rem;
+
+    i{
+        font-size: var(--fs-20);
+    }
+
+    h4{
+        font-size: var(--fs-10);
+    }
+}
+
+.card-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+
+    h1{
+        font-size: var(--fs-50);
+    }
+}
+
+.card-chart{
+    height: 80%;
+}
