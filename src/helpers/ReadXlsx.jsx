@@ -2,7 +2,10 @@ import * as XLSX from "xlsx";
 
 const ReadXlsx = async (setData, sheetNo) => {
 
-    await fetch('../src/assets/data/PMDataConsolidatedv1.0.xlsx')
+    const dataFilePath = import.meta.env.VITE_DATA_FILE_PATH;
+    // console.log(dataFilePath);
+
+    await fetch(dataFilePath)
     .then(resp => resp.blob())
     .then(data => {
       const file = data; //e.target.files;

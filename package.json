@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build & npm run copy_assets",
+    "preview": "vite preview",
+    "copy_assets": "copyfiles -u 2 \"./src/assets/data/*.xlsx\" ./dist/assets/"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "copyfiles": "^2.4.1",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react-router-dom": "^6.3.0",
