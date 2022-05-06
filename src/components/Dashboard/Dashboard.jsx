@@ -13,7 +13,7 @@ import './dashboard.scss'
 
 const Dashboard = () => {
   const [pageName, setPageName] = useState("Dashboard");
-  const [pageSummary, setPageSummary] = useState("Welcome to equipment health monitoring, analysis and forcasting app.");
+  const [pageSummary, setPageSummary] = useState("Equipment health monitoring, analysis and forcasting app.");
 
   const [xlData, setXlData] = useState([]);
 
@@ -34,8 +34,8 @@ const Dashboard = () => {
     const todaysData = xlData.filter(d => d.Timestamp.indexOf("2022-04-26") != -1);
     
     const motors = todaysData.map(d => d["Motor ID"]);
-    const criticalMotors = todaysData.filter(d => d["Anomaly Flag"]===2).map(d => d["Motor ID"]);
-    const warningMotors = todaysData.filter(d => d["Anomaly Flag"]===1).map(d => d["Motor ID"]);
+    const criticalMotors = todaysData.filter(d => d["Anomaly Flag"]===2).map(d => d["Motor ID"].trim());
+    const warningMotors = todaysData.filter(d => d["Anomaly Flag"]===1 && criticalMotors.indexOf(d["Motor ID"].trim()) == -1).map(d => d["Motor ID"]);
     //const normalMotors = todaysData.filter(d => d["Anomaly Flag"]===0).map(d => d["Motor ID"]);
     const uniqueMotors = motors.filter(onlyUnique).length;
     const uniqueCMotors = criticalMotors.filter(onlyUnique).length;
@@ -157,62 +157,3 @@ const Dashboard = () => {
 }
 
 export default Dashboard
-
-
-{/* <div className="page-content">
-        <div className="health-info row">
-          <div className="health-gauge bg-shadow">
-            <h4>Health Score</h4>
-            <div className="health-score">
-              <ReactSpeedometer
-                segments={100}
-                maxSegmentLabels={0}
-                maxValue={100}
-                value={60}
-                fluidWidth={true}
-                startColor={"#f53d3d"}
-                endColor={"#40c234"}
-                needleHeightRatio={0.6}
-                needleColor={"#4e37b3"}
-                textColor={"#4e37b3"}
-                currentValueText={"${value}%"}
-              />
-            </div>
-          </div>
-          <div className="health-summary bg-shadow">
-            <h4>Health summary</h4>
-            <div className="health-summary-chart">
-              <HealthSummary />
-            </div>
-          </div>
-        </div>
-        <div className="row app-info">
-          <div className="data-analyzed bg-shadow">
-            <h4>Data points analyzed</h4>
-            <div className="data-analyzed-chart">
-                <DataAnalyzed />
-            </div>
-          </div>
-          <div className="efficiency-metric">
-            <div className="storage-usage bg-shadow">
-              <div className="storage-usage-chart">
-                <StorageUsage />
-              </div>
-              <h4>Storage<br /> Usage</h4>
-            </div>
-            <div className="memory-usage bg-shadow">
-              <div className="memory-usage-chart">
-                <MemoryUsage />
-              </div>
-              <h4>Memory<br /> Usage</h4>
-            </div>
-          </div>
-          <div className="system-efficiency bg-shadow">
-            <h4>System efficency summary</h4>
-            <div className="system-efficiency-chart">
-              <SystemEfficiency />
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>*/}

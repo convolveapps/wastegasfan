@@ -5,7 +5,7 @@ const CustomizedDot = (props) => {
   const { cx, cy, stroke, payload, value } = props;
     return (
       <svg x={cx-8} y={cy-8} width={150} height={150} viewBox="0 0 1024 1024">
-        <circle cx="50" cy="50" r="40" stroke-width="20" fill={payload.type} />
+        <circle cx="50" cy="50" r="40" strokeWidth="20" fill={payload.type} />
       </svg>
     );
 };
@@ -14,7 +14,7 @@ const CustomizedActiveDot = (props) => {
   const { cx, cy, stroke, payload, value } = props;
     return (
       <svg x={cx-10} y={cy-10} width={200} height={200} viewBox="0 0 1024 1024">
-        <circle cx="50" cy="50" r="40" stroke-width="20" fill={payload.type} />
+        <circle cx="50" cy="50" r="40" strokeWidth="20" fill={payload.type} />
       </svg>
     );
 };

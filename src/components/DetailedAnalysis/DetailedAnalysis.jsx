@@ -72,7 +72,10 @@ const DetailedAnalysis = () => {
 
     const createTableData = () =>{
         const anomalyFlag = fanType == "critical" ? 2 : 1;
-        const motorData = anomalyDataXl?.filter(d => d.Timestamp.indexOf("2022-04-26") != -1 && d["Anomaly Flag"]===anomalyFlag);
+        const cMotors = anomalyDataXl?.filter(d => d.Timestamp.indexOf("2022-04-26") != -1 && d["Anomaly Flag"]===2);
+        const cMotroIds = cMotors.map(d => d["Motor ID"]);
+        const wData = anomalyDataXl?.filter(d => d.Timestamp.indexOf("2022-04-26") != -1 && d["Anomaly Flag"]===1 && cMotroIds.indexOf(d["Motor ID"]) == -1);
+        const motorData = anomalyFlag == 2 ? cMotors : wData;
         const aggregatedData = []
         for(let i=0; i<motorData.length; i++){
             const index = aggregatedData.findIndex(x => x["motorId"] == motorData[i]["Motor ID"]);
