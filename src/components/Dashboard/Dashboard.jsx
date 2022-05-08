@@ -12,8 +12,8 @@ import './dashboard.scss'
 
 
 const Dashboard = () => {
-  const [pageName, setPageName] = useState("Dashboard");
-  const [pageSummary, setPageSummary] = useState("Equipment health monitoring, analysis and forcasting app.");
+  const [pageName, setPageName] = useState("Predictive maintenance dashboard");
+  const [pageSummary, setPageSummary] = useState();
 
   const [xlData, setXlData] = useState([]);
 
