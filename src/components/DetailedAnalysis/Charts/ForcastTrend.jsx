@@ -3,12 +3,19 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const ForcastTrend = ({data}) => {
 
+    const forcastData = data.map(x => ({
+      actualValue: parseFloat(x.actualValue).toFixed(2),
+      forcastedValue: parseFloat(x.forcastedValue).toFixed(2),
+      parameter: x.parameter,
+      timestamp: x.timestamp
+    }));
+
     return (
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
-          data={data}
+          data={forcastData}
           margin={{
             top: 5,
             right: 30,

@@ -50,7 +50,7 @@ export default function PersistentAnomaly({persistentAnomaly}) {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="motorId" interval={0} angle={20} dx={20} dy={10} />
-          <YAxis />
+          <YAxis ticks={[0,1,2,3]} />
           <Tooltip />
           {/* <Legend /> */}
           <Bar dataKey="count" fill="#f53d3d" />

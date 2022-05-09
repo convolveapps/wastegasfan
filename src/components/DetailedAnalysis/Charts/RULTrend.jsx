@@ -1,14 +1,22 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
+
 const RULTrend = ({data}) => {
+
+    const rulData = data.map(x => (
+      {
+        date: x.date,
+        RUL: parseFloat(parseFloat(x.RUL).toFixed(2))
+      }
+    ))
 
     return (
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
           height={300}
-          data={data}
+          data={rulData}
           margin={{
             top: 5,
             right: 30,

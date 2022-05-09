@@ -21,6 +21,13 @@ const CustomizedActiveDot = (props) => {
 
 const AnomalyTrend = ({data}) => {
 
+    const anomalyData = data.map(x => ({
+      anomalies: parseFloat(x.anomalies).toFixed(2),
+      parameter: x.parameter,
+      timestamp: x.timestamp,
+      type: x.type
+    }));
+
     const fillColor = (type) =>{
       if(type == 0){
         return "#8884d8"; 
@@ -38,7 +45,7 @@ const AnomalyTrend = ({data}) => {
         <LineChart
           width={500}
           height={300}
-          data={data}
+          data={anomalyData}
           margin={{
             top: 5,
             right: 30,
