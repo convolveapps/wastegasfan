@@ -14,8 +14,8 @@ const FansTable = ({fanTableData, setSelectedMotorId}) => {
                 <tr>
                     <th>Plant Id</th>
                     <th>Sub-plant Id</th>
-                    <th>Motor Id</th>
-                    <th>Motor name</th>
+                    <th>Fan Id</th>
+                    <th>Fan name</th>
                     <th>Severity</th>
                 </tr>
             </thead>

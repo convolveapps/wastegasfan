@@ -84,41 +84,41 @@ const Dashboard = () => {
           <div className="fans-in-operation">
             <div className="card-heading">
               <i className="fa-solid fa-city text-primary"></i>
-              <h4>Total motors in operation</h4>
+              <h4>Total fans in operation</h4>
             </div>
             <div className="card-detail">
               <h1 className='no-of-fans text-primary'>{totalMotors}</h1>
-              <p className='text'>Motors</p>
+              <p className='text'>Fans</p>
             </div>
           </div>
           <div className="critial-fans" onClick={() => showDetails("critical")}>
             <div className="card-heading">
               <i className="fa-solid fa-city text-danger"></i>
-              <h4>Critical motors</h4>
+              <h4>Critical fans</h4>
             </div>
             <div className="card-detail">
               <h1 className='no-of-fans text-danger'>{criticalMotors}</h1>
-              <p className='text'>Motors</p>
+              <p className='text'>Fans</p>
             </div>
           </div>
           <div className="warning-fans" onClick={() => showDetails("warning")}>
             <div className="card-heading">
               <i className="fa-solid fa-city text-warning"></i>
-              <h4>Warning motors</h4>
+              <h4>Warning fans</h4>
             </div>
             <div className="card-detail">
               <h1 className='no-of-fans text-warning'>{warningMotors}</h1>
-              <p className='text'>Motors</p>
+              <p className='text'>Fans</p>
             </div>
           </div>
           <div className="normal-fans">
             <div className="card-heading">
               <i className="fa-solid fa-city text-success"></i>
-              <h4>Normal motors</h4>
+              <h4>Normal fans</h4>
             </div>
             <div className="card-detail">
               <h1 className='no-of-fans text-success'>{normalMotors}</h1>
-              <p className='text'>Motors</p>
+              <p className='text'>Fans</p>
             </div>
           </div>
         </div>
